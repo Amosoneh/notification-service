@@ -4,15 +4,16 @@ import lombok.AllArgsConstructor;
 import org.karrabo.notification.datas.dto.request.EmailRequest;
 import org.karrabo.notification.datas.dto.response.EmailResponse;
 import org.karrabo.notification.exceptions.EmailServiceException;
-import org.karrabo.notification.sercvices.EmailService;
+import org.karrabo.notification.sercvices.interfaces.EmailService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @AllArgsConstructor
-@Controller
+@RestController
 @RequestMapping("/api/v1")
 public class EmailController {
     private final EmailService emailService;

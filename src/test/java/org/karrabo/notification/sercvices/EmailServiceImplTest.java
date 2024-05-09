@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.karrabo.notification.datas.dto.request.EmailRequest;
 import org.karrabo.notification.exceptions.EmailServiceException;
 import org.karrabo.notification.datas.model.Email;
+import org.karrabo.notification.sercvices.interfaces.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;

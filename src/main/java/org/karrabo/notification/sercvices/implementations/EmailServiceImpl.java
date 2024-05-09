@@ -1,4 +1,4 @@
-package org.karrabo.notification.sercvices;
+package org.karrabo.notification.sercvices.implementations;
 
 import freemarker.template.Configuration;
 import jakarta.annotation.Resource;
@@ -13,6 +13,7 @@ import org.karrabo.notification.datas.dto.response.EmailResponse;
 import org.karrabo.notification.datas.repositories.EmailRepository;
 import org.karrabo.notification.exceptions.EmailServiceException;
 import org.karrabo.notification.datas.model.Email;
+import org.karrabo.notification.sercvices.interfaces.EmailService;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -24,7 +25,7 @@ import java.util.Map;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class EmailServiceImpl implements EmailService{
+public class EmailServiceImpl implements EmailService {
     private final JavaMailSender javaMailSender;
     @Resource
     private Configuration fmConfiguration;
