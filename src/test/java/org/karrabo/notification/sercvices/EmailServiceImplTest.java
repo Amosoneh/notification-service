@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.karrabo.notification.datas.dto.request.EmailRequest;
 import org.karrabo.notification.exceptions.EmailServiceException;
 import org.karrabo.notification.datas.model.Email;
-import org.karrabo.notification.sercvices.interfaces.EmailService;
+import org.karrabo.notification.sercvices.email.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -32,7 +32,7 @@ class EmailServiceImplTest {
 
     @BeforeEach
     void setUp(){
-        Map<String, Object> model = new HashMap<>();
+        Map<String, String> model = new HashMap<>();
         model.put("firstName", "Amos");
         model.put("lastName", "Amos");
         emailRequest = EmailRequest.builder().userEmail("amoskhaled@gmail.com").model(model)

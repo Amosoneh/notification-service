@@ -19,6 +19,6 @@ public class Email {
     String content;
     LocalDateTime sentAt = LocalDateTime.now();
     LocalDateTime expiresAt = sentAt.plusMinutes(1);
-    private Map< String, Object > model;
+    private Map< String, String > model;
     private boolean isSent = false;
 }

@@ -8,6 +8,6 @@ import java.util.Map;
 @Data @Builder
 public class EmailRequest {
     private String userEmail;
-    private Map<String, Object> model;
+    private Map<String, String> model;
     private String subject;
 }
